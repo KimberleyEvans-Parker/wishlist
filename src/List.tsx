@@ -10,6 +10,7 @@ const List = () => {
     return (
         <div>{id}
             <ListItem buyerView={true} title="Pony" description="I want a pony" quantity={5} bought={2} />
+            <ListItem buyerView={true} title="Pony" description="I want a pony" quantity={5} bought={2} />
         </div>
       );
 }

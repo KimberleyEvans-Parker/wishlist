@@ -13,6 +13,16 @@ code {
 }
 
 .list-item-container {
+  margin: 10px 0 0 0;
+  max-height: 70px;
+  transition-duration: 0.5s;
+}
+
+.height-auto {
+  max-height: 150px;
+}
+
+.list-item-bar {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
   max-width: 500px;
@@ -22,6 +32,7 @@ code {
   height: 50px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .list-item-title {
@@ -33,13 +44,13 @@ code {
   border-radius: 50%;
   width: 50px;
   height: 50px;
+  line-height: 50px;
   font-size: larger;
   font-weight: bold;
   align-items: center;
   vertical-align: middle;
-  line-height: 50px;
   text-align: center;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .list-item-container h1 {
@@ -48,7 +59,6 @@ code {
 
 .float-right {
   float: right;
-  background-color: blueviolet;
   cursor: pointer;
   font-size: xx-large;
   line-height: 40px;
@@ -56,4 +66,31 @@ code {
 
 .rotate {
   transform: rotate(90deg);
+}
+
+.content {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 25px;
+  margin: auto;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: -30px;
+  padding-top: 50px;
+  z-index: -1;
+  position: relative;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-duration: 0.5s;
+  max-height: 0px;
+}
+
+.grow {
+  transform: scaleY(1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  max-height: 150px;
 }
