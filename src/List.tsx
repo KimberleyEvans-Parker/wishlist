@@ -6,7 +6,7 @@ import ListItem from "./components/ListItem";
 const List = () => {
   const params = useParams();
   const id = params.id;
-  const buyerView = false;
+  const buyerView = true;
 
   return (
     <div>

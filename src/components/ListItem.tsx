@@ -5,14 +5,15 @@ import Bin from "../assets/bin.png";
 // buyerView: boolean, title: string, description: string, quantity: number, bought: number
 const ListItem = (props: any) => {
   const [expanded, setExpanded] = useState(false);
+  const quantityRemaining = props?.quantity - props?.bought;
 
-  if (props?.buyerView && props?.quantity - props?.bought == 0) return <></>;
+  if (props?.buyerView && quantityRemaining == 0) return <></>;
 
   return (
     <div className={`list-item-container ${expanded && "height-auto"}`}>
       <div className="list-item-bar">
         <div className="circle">
-          {props?.buyerView ? props?.quantity - props?.bought : props?.quantity}
+          {props?.buyerView ? quantityRemaining : props?.quantity}
         </div>
         <h1 className="list-item-title">{props?.title}</h1>
         <div
